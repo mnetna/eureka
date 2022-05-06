@@ -1,0 +1,15 @@
+server:
+  port: 8787
+  enableSelfPreservation: false
+
+# -- Eureka
+eureka:
+  instance:
+    prefer-ip-address: true
+    hostname: 10.10.1.33
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    registryFetchIntervalSeconds: 10
+    serviceUrl:
+      defaultZone: http://10.10.1.33:8787/eureka/
